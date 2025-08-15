@@ -26,9 +26,9 @@ Prediction for new book [3, 2]: -1
 Errors per epoch: [2, 1, 2, 1, 1, 1, 0, 0, 0, 0]
 Answers
 
-It is classified as non-fiction
-There are 8 errors
-It tells me that the model found weights that separate the training data perfectly which means the data set is separated linear,once the separating line is found, mistakes will no longer occur.
+1. It is classified as non-fiction
+2. There are 8 errors
+3. It tells me that the model found weights that separate the training data perfectly which means the data set is separated linear,once the separating line is found, mistakes will no longer occur.
 
 [3]
 0s
@@ -45,8 +45,8 @@ error change over 10 epochs: 2-1-2-1-1-1-0-0-0-0
 It stops at 7
 Answers
 
-I think its because the perceptron updates one sample at a time. An update that fixes one sample can temporarily break another, so the count can oscillate until a stable separating boundary is found.
-It means that there are no more errors.The current weights classify all training points correctly.
+1. I think its because the perceptron updates one sample at a time. An update that fixes one sample can temporarily break another, so the count can oscillate until a stable separating boundary is found.
+2. It means that there are no more errors.The current weights classify all training points correctly.
 
 [4]
 0s
@@ -73,13 +73,13 @@ plt.grid(True)
 plt.show()
 Observations
 
-The new book is predicted -1
-It does separate them correctly after convergence
+1. The new book is predicted -1
+2. It does separate them correctly after convergence
 Answers
 
-The new book gets the prediction of -1 because it falls on the non-fiction side of the learned line
-It separates them by a straight line in(size, color) space, the points on the other side are labeled +1 and -1 on the other side.
-I'm expecting it to lie on the positive side.
+1. The new book gets the prediction of -1 because it falls on the non-fiction side of the learned line
+2. It separates them by a straight line in(size, color) space, the points on the other side are labeled +1 and -1 on the other side.
+3. I'm expecting it to lie on the positive side.
 Exersice 4
 
 Setting 1
@@ -92,9 +92,9 @@ The prediction for [3,2] -1
 The error list [2,1,2,1,1]
 Answers
 
-I think faster learning can converge faster if you allow enough epochs, but with only 5 it hadn't reach 0.
-More epochs give more chances to fix mistakes, with n_iter=5 we didn't get to 0, with n-iter=20 we did.
-No these two settings both give -1, because both either converge to or are close maybe they are close to a boundary that places[3,2] on the -1
+1. I think faster learning can converge faster if you allow enough epochs, but with only 5 it hadn't reach 0.
+2. More epochs give more chances to fix mistakes, with n_iter=5 we didn't get to 0, with n-iter=20 we did.
+3. No these two settings both give -1, because both either converge to or are close maybe they are close to a boundary that places[3,2] on the -1
 
 [5]
 11s
@@ -148,14 +148,14 @@ plt.show()
 
 Record
 
-The prediction for [4.0, 1.0]
-The error list [2, 2, 0, 0, 0, 0, 0, 0, 0, 0]
-Observations from the plot
+1. The prediction for [4.0, 1.0]
+2. The error list [2, 2, 0, 0, 0, 0, 0, 0, 0, 0]
+3. Observations from the plot
 Answers
 
-The output is -1 for Setosa and +1 for Versicolor. For [4.0, 1.0], you should get +1 Versicolor.
-Yes within a few epochs, because Setosa vs. Versicolor are linearly separable using petal length/width. Once a separating line is found, training errors drop to 0.
-Both are linearly separable, but Iris has many points with a clear margin between Setosa and Versicolor on these features, so separation is also straightforward.
+1. The output is -1 for Setosa and +1 for Versicolor. For [4.0, 1.0], you should get +1 Versicolor.
+2. Yes within a few epochs, because Setosa vs. Versicolor are linearly separable using petal length/width. Once a separating line is found, training errors drop to 0.
+3. Both are linearly separable, but Iris has many points with a clear margin between Setosa and Versicolor on these features, so separation is also straightforward.
 
 [8]
 0s
@@ -174,6 +174,6 @@ Prediction for [3, 2]: -1
 Errors: [2, 1, 2, 1, 1, 1, 0, 0, 0, 0]
 Answers
 
-No it's still -1. The new point keeps the set linearly separable, and the learned boundary still places [3,2] on the -1 side.
-It still reaches 0 by epoch 7, confirming separability.
-Yes, it can. Different initial weights may yield different separating lines on the same separable data, which can change how fast errors drop and occasionally change the prediction for a new point near the boundary.The training labels remain perfectly classified once a separator is found, but the exact separator can vary, hence different outcomes for unseen points
+1. No it's still -1. The new point keeps the set linearly separable, and the learned boundary still places [3,2] on the -1 side.
+2. It still reaches 0 by epoch 7, confirming separability.
+3. Yes, it can. Different initial weights may yield different separating lines on the same separable data, which can change how fast errors drop and occasionally change the prediction for a new point near the boundary.The training labels remain perfectly classified once a separator is found, but the exact separator can vary, hence different outcomes for unseen points
